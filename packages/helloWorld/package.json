@@ -8,9 +8,9 @@
     "build": ""
   },
   "dependencies": {
-    "underscore": "^1.9.1",
     "@sage/myget-hello": "^1.0.0",
-    "@sage/myget-world": "^1.0.0"
+    "@sage/myget-world": "^1.0.0",
+    "underscore": "^1.9.1"
   },
   "author": "",
   "license": "ISC"

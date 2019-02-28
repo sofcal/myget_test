@@ -18,6 +18,7 @@ steps:
 - task: npmAuthenticate@0
   inputs:
     customEndpoint: npm_repos
+    workingFile: /.npmrc
 
 - script: |
     git checkout master

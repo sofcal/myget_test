@@ -1,6 +1,10 @@
 {
   "name": "@sage/myget-hello",
   "version": "1.2.3",
+  "publishConfig": {
+    "registry": "https://sage.myget.org/F/test-npm/npm/",
+    "access": "public"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {

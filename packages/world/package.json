@@ -1,6 +1,7 @@
 {
   "name": "@sage/myget-world",
   "version": "1.0.0",
+  "publishConfig": { "registry":"http://my-internal-registry.local", "access": "public" },
   "description": "",
   "main": "index.js",
   "scripts": {

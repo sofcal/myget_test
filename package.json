@@ -1,0 +1,19 @@
+{
+  "name": "myget-lerner-repos",
+  "version": "1.0.0",
+  "description": "a test project using lerna and myget",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./build && rimraf ./coverage && rimraf ./.nyc_output && rimraf node_modules && lerna run clean",
+    "prebuild": "lerna bootstrap --hoist --no-hoist=internal-*",
+    "build": "lerna run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "lerna": "^3.2.1"
+  }
+}

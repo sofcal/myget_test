@@ -1,0 +1,17 @@
+{
+  "name": "sage-myget-helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./coverage/ && rimraf ./.nyc_output/ && rimraf ./node_modules/",
+    "build": ""
+  },
+  "dependencies": {
+    "underscore": "^1.9.1",
+    "@sage/myget-hello": "^1.0.0",
+    "@sage/myget-world": "^1.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

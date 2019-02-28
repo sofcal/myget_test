@@ -1,0 +1,12 @@
+{
+  "name": "@sage/myget-hello",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./coverage/ && rimraf ./.nyc_output/ && rimraf ./node_modules/",
+    "build": ""
+  },
+  "author": "",
+  "license": "ISC"
+}

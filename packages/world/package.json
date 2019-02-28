@@ -1,6 +1,6 @@
 {
   "name": "@sage/myget-world",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "publishConfig": {
     "registry": "https://sage.myget.org/F/test-npm/npm/",
     "access": "public"

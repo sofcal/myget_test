@@ -21,12 +21,12 @@ steps:
     npm run build
   displayName: 'npm prepenv/build'
 
-- task: Npm@1
-  inputs:
-    command: 'custom'
+#- task: Npm@1
+#  inputs:
+    #command: 'install' # Options: install, publish, custom
     #workingDir: # Optional
-    verbose: true # Optional
-    customCommand: run customPublish
+    #verbose: # Optional
+    #customCommand: # Required when command == Custom
     #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
     #customEndpoint: # Optional
@@ -35,6 +35,10 @@ steps:
     #publishPackageMetadata: true # Optional
     #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
 
-#- script: |
-#    lerna publish from-git --registry=https://sage.myget.org/F/test-npm/npm/ --yes
-#  displayName: 'npm publish'
+- task: npmAuthenticate@0
+  inputs:
+    customEndpoint: npm_repos
+
+- script: |
+    lerna publish from-git --registry=https://sage.myget.org/F/test-npm/npm/ --yes
+  displayName: 'npm publish'

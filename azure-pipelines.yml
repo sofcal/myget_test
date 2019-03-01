@@ -77,7 +77,7 @@ steps:
 - task: CmdLine@2
   inputs:
     azureSubscription: 'npm_repos'
-    script: 'git_status="$(git status 2> /dev/null)"; echo "${git_status}"'
+    script: 'git update-index --assume-unchanged .npmrc'
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 

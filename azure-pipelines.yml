@@ -60,7 +60,7 @@ steps:
     #publishPackageMetadata: true # Optional
     #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
 
-- task: Npm@2
+- task: Npm@1
   inputs:
     command: 'custom'
     #workingDir: # Optional
@@ -74,7 +74,7 @@ steps:
     #publishPackageMetadata: true # Optional
     #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
 
-- task: Npm@3
+- task: Npm@1
   inputs:
     command: 'custom'
     #workingDir: # Optional

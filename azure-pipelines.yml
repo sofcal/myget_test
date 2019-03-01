@@ -26,6 +26,12 @@ steps:
     customEndpoint: npm_repos
     workingFile: ./.npmrc
 
+- task: CmdLine@2
+  inputs:
+    script: 'echo "CWD: ${PWD}"; cat ${PWD}/.npmrc; echo "end"'
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
 - script: |
     git checkout master
     npm run prepenv

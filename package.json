@@ -4,11 +4,11 @@
   "description": "a test project using lerna and myget",
   "main": "index.js",
   "scripts": {
-    "prepenv": "npm install -g lerna@3.2.1 && npm install -g serverless@1.30.3 && npm install -g rimraf",
+    "prepenv": "npm install -g lerna@3.13.1 && npm install -g serverless@1.30.3 && npm install -g rimraf",
     "clean": "rimraf ./build && rimraf ./coverage && rimraf ./.nyc_output && rimraf node_modules && lerna run clean",
     "prebuild": "lerna bootstrap --hoist --no-hoist=internal-*",
     "build": "lerna run build",
-    "customPublish": "lerna publish from-git --registry=https://sage.myget.org/F/test-npm/npm/ --yes --no-git-reset"
+    "customPublish": "lerna publish from-git --registry=https://sage.myget.org/F/test-npm/npm/ --yes"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,6 @@
     "underscore": "^1.9.1"
   },
   "devDependencies": {
-    "lerna": "^3.2.1"
+    "lerna": "^3.13.1"
   }
 }

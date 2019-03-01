@@ -17,7 +17,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'echo "CWD: ${PWD}"; cat ${PWD}/.npmrc'
+    script: 'echo "CWD: ${PWD}"; cat ${PWD}/.npmrc; echo "end"'
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 

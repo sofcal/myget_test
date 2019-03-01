@@ -74,6 +74,13 @@ steps:
     #publishPackageMetadata: true # Optional
     #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
 
+- task: CmdLine@2
+  inputs:
+    azureSubscription: 'npm_repos'
+    script: 'git_status="$(git status 2> /dev/null)"; echo "${git_status}"'
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
 - task: Npm@1
   inputs:
     command: 'custom'

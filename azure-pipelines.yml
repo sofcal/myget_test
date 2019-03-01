@@ -21,10 +21,10 @@ steps:
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
-- task: npmAuthenticate@0
-  inputs:
-    customEndpoint: npm_repos
-    workingFile: ./.npmrc
+#- task: npmAuthenticate@0
+#  inputs:
+#    customEndpoint: npm_repos
+#    workingFile: ./.npmrc
 
 - task: CmdLine@2
   inputs:
@@ -36,7 +36,7 @@ steps:
 - task: CmdLine@2
   inputs:
     azureSubscription: 'npm_repos'
-    script: 'git checkout master && npm run prepenv && npm run build'
+    script: 'git checkout master'
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
@@ -46,19 +46,20 @@ steps:
 #    npm run build
 #  displayName: 'npm prepenv/build'
 
-#- task: Npm@1
-#  inputs:
-    #command: 'install' # Options: install, publish, custom
+- task: Npm@1
+  inputs:
+    command: 'custom'
     #workingDir: # Optional
-    #verbose: # Optional
-    #customCommand: # Required when command == Custom
-    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    verbose: true # Optional
+    customCommand: run prepenv
+    customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
-    #customEndpoint: # Optional
+    customEndpoint: npm_repos # Optional
     #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
     #publishFeed: # Required when publishRegistry == UseFeed
     #publishPackageMetadata: true # Optional
     #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
+
 
 - script: |
     lerna publish from-git --registry=https://sage.myget.org/F/test-npm/npm/ --yes

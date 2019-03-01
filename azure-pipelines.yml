@@ -15,6 +15,12 @@ steps:
     versionSpec: '6.x'
   displayName: 'Install Node.js'
 
+- task: CmdLine@2
+  inputs:
+    script: 'echo ${PWD}.'
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
 - task: npmAuthenticate@0
   inputs:
     customEndpoint: npm_repos

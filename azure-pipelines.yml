@@ -50,7 +50,7 @@ steps:
   inputs:
     command: 'custom'
     #workingDir: # Optional
-    verbose: true # Optional
+    verbose: false # Optional
     customCommand: run prepenv
     customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
@@ -60,7 +60,30 @@ steps:
     #publishPackageMetadata: true # Optional
     #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
 
+- task: Npm@2
+  inputs:
+    command: 'custom'
+    #workingDir: # Optional
+    verbose: false # Optional
+    customCommand: run build
+    customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    #customFeed: # Required when customRegistry == UseFeed
+    customEndpoint: npm_repos # Optional
+    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
+    #publishFeed: # Required when publishRegistry == UseFeed
+    #publishPackageMetadata: true # Optional
+    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
 
-- script: |
-    lerna publish from-git --registry=https://sage.myget.org/F/test-npm/npm/ --yes
-  displayName: 'npm publish'
+- task: Npm@3
+  inputs:
+    command: 'custom'
+    #workingDir: # Optional
+    verbose: false # Optional
+    customCommand: run customPublish
+    customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    #customFeed: # Required when customRegistry == UseFeed
+    customEndpoint: npm_repos # Optional
+    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
+    #publishFeed: # Required when publishRegistry == UseFeed
+    #publishPackageMetadata: true # Optional
+    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry

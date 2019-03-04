@@ -11,6 +11,7 @@
   "dependencies": {
     "@sage/myget-hello": "^1.5.2",
     "@sage/myget-temp": "^1.5.2",
+    "@sage/myget-temp2": "^1.5.2",
     "@sage/myget-world": "^1.5.2",
     "underscore": "^1.9.1"
   },

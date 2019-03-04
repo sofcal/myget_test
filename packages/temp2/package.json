@@ -1,0 +1,16 @@
+{
+  "name": "@sage/myget-temp2",
+  "version": "1.5.2",
+  "publishConfig": {
+    "registry": "https://sage.myget.org/F/test-npm/npm/",
+    "access": "public"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./coverage/ && rimraf ./.nyc_output/ && rimraf ./node_modules/",
+    "build": ""
+  },
+  "author": "",
+  "license": "ISC"
+}

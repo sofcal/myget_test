@@ -86,7 +86,7 @@ steps:
     command: 'custom'
     #workingDir: # Optional
     verbose: false # Optional
-    customCommand: run customPublish
+    customCommand: run release:ci
     customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
     customEndpoint: npm_repos # Optional

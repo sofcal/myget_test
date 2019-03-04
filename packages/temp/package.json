@@ -1,18 +1,15 @@
 {
-  "name": "sage-myget-helloworld",
+  "name": "@sage/myget-temp",
   "version": "1.5.0",
-  "private": true,
+  "publishConfig": {
+    "registry": "https://sage.myget.org/F/test-npm/npm/",
+    "access": "public"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf ./coverage/ && rimraf ./.nyc_output/ && rimraf ./node_modules/",
     "build": ""
-  },
-  "dependencies": {
-    "@sage/myget-hello": "^1.5.0",
-    "@sage/myget-world": "^1.5.0",
-    "@sage/myget-temp": "^1.5.0",
-    "underscore": "^1.9.1"
   },
   "author": "",
   "license": "ISC"

@@ -1,6 +1,6 @@
 {
   "name": "@sage/myget-temp",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "publishConfig": {
     "registry": "https://sage.myget.org/F/test-npm/npm/",
     "access": "public"

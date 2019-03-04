@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = () => 'world';
+module.exports = () => 'world!';

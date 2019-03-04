@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = () => 'hello';
+module.exports = () => 'hello!';
